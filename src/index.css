@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Forum&display=swap');
+
+@font-face {
+  font-family: 'Abaddon'; 
+  src: url('assets/font/AbaddonJeda.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  cursor: url('/cursor.png') 0 0, auto; /* Adjust coordinates for better positioning */
+}
+
+.preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.preloader-content {
+  text-align: center;
+  color: #fff;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.fade-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.instruction {
+  margin-top: 40px;
+  font-style: italic;
+  color: #ccc;
+}
